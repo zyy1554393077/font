@@ -3,17 +3,17 @@ body {
     font-family: microsoft yahei, Arial, '微软雅黑';
     background: #fff
 }
-
+/*This CSS code is used to set the basic style of a webpage*/
 a {
     text-decoration: none;
     color: #999
 }
-
+/*CSS code is used to style all<a>tags (i.e. hyperlink elements) in a webpage.*/
 a:hover {
     text-decoration: underline;
     color: #999
 }
-
+/*This CSS code is used to set the style of all hyperlinks in a webpage when hovering over the mouse.*/
 .iwidth {
     width: 1080px;
     margin: 0 auto
@@ -22,7 +22,7 @@ a:hover {
 .clear {
     clear: both
 }
-/* 导航 */
+/* Navigation */
 
 .header,
 .topbak {
