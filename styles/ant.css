@@ -520,7 +520,7 @@ a:hover {
     margin: 0 auto;
     margin-top: 30px;
 }
-
+/*A CSS style definition that sets some styles for a class named. cview.*/
 .cview:hover {
     color: #fff;
     text-decoration: underline;
