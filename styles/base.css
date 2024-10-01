@@ -63,7 +63,7 @@ a {
     font-family: "微软雅黑";
     border: none;
 }
-
+/*A CSS style definition that sets some styles for<a>tags.*/
 a:link {
     text-decoration: none;
     border: none;
