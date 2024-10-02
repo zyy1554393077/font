@@ -6,6 +6,7 @@
     <title>detail</title>
     <link href="styles/reset.css" rel="stylesheet" type="text/css" />
     <link href="styles/ant.css" rel="stylesheet" type="text/css" />
+    <script src="./js/detail.js"></script>
 </head>
 <body>
 <div class="header ">
@@ -19,19 +20,12 @@
 <div class="casecon">
     <div class="iwidth">
         <div class="simg">
-            <img src="images/20141121034607196.jpg" />
+            <img id="image" src="" />
         </div>
         <div class="casetit">
-            <h3>caption</h3>
+            <h3 id="caption"></h3>
         </div>
-        <div class="casetit">
-            <h3>organiser</h3>
-            <span>Target: new york</span>
-            <span>Current: new york</span>
-            <span>City: new york</span>
-            <span>Status: new york</span>
-            <span>Category: new york</span>
-        </div>
+        <div id="info" class="casetit"></div>
         <div class="mt10 ohidd" style="background:#fff;">
             <div class="ccon">
                 <div>
@@ -41,13 +35,13 @@
                         </span>
                     </p>
                     <p>&nbsp;</p>
-                    <p>describe</p>
+                    <p id="describe"></p>
                 </div>
                 <br />
             </div>
             <div style="height:60px"></div>
         </div>
-        <a href="" class="cview">Donate</a>
+        <a href="#" class="cview" onclick="alert('This feature is under construction')">Donate</a>
     </div>
 </div>
 <div class="clear"></div>

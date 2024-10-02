@@ -23,7 +23,7 @@ form {
     padding: 0;
     border: 0;
 }
-/*Used to reset the default styles of common elements in web pages to ensure consistent appearance across different browsers*/
+
 body {
     font-family: "微软雅黑";
 }
@@ -46,7 +46,7 @@ select {
 input {
     font-family: "微软雅黑", "Arial", "宋体", "华文宋体";
 }
-/*Set specific styles for multiple elements in web pages*/
+
 .clear {
     zoom: 1;
 }
@@ -63,7 +63,7 @@ a {
     font-family: "微软雅黑";
     border: none;
 }
-/*A CSS style definition that sets some styles for<a>tags.*/
+
 a:link {
     text-decoration: none;
     border: none;
@@ -85,5 +85,3 @@ a:hover {
 .posa {
     position: absolute
 }
-/*Used to set specific styles for multiple elements in web pages*/
-/*This code is a CSS style sheet that defines default styles for multiple elements in a webpage.*/

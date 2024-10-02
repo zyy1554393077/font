@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <meta name="renderer" content="webkit" />
+        <title>客户案例</title>
+        <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+        <link href="styles/ant.css" rel="stylesheet" type="text/css" />
+        <script src="./js/search.js"></script>
+        <!-- <script src="./js/category.js"></script> -->
+    </head>
+    <body>
+        <div class="header ">
+            <div class="iwidth">
+                <ul class="nav-site">
+                    <li><a href="index.html"><span>HOME</span></a></li>
+                    <li><a class="ahov" href="fundraiser.html"><span>FUNDRAISER</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ncase">
+            <div class="form-box">
+                <div class="title">Browse fundraisers by category</div>
+                <div id="form" class="my-form"></div>
+                <button id="search">Search</button>
+                <button id="clear">Clear</button>
+            </div>
+            <ul class="iwidth ohidd pr" id="caselist"></ul>
+        </div>
+        <script>
+            (function() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'http://localhost:8080/api/category', true);
+                xhr.onload = function () {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        let form = document.querySelector('#form')
+                        var data = JSON.parse(xhr.responseText)
+                        dataList = data
+                        let text = ''
+                        data.forEach(item => {
+                            text += `
+                            <div>
+                                <input id="`+ item.CATEGORY_ID + `" type="checkbox" value=` + item.CATEGORY_ID + ` />
+                                <label for="`+ item.CATEGORY_ID + `">` + item.NAME + `</label>
+                            </div>
+                            `
+                        })
+                        form.innerHTML = text
+                        console.log(text);
+                        
+                        const search = document.getElementById('search');
+                        const clear = document.getElementById('clear');
+                        const checkboxes = document.querySelectorAll('#form input[type="checkbox"]');
+                        search.addEventListener('click', searchFun);
+                        clear.addEventListener('click', clearChechboxes);
+                        function getSelectedCategories() {
+                            return Array.from(checkboxes)
+                                .filter(checkbox => checkbox.checked)
+                                .map(checkbox => {
+                                    return checkbox.value
+                                });
+                        }
+                        function searchFun() {
+                            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+                            const selectedValues = Array.from(checkboxes).map(cb => cb.value);
+                            if (selectedValues.length > 0) {
+                                getList(selectedValues.join(', '))
+                            } else {
+                                alert('Please select category')
+                            }
+                        }
+                        function clearChechboxes() {
+                            checkboxes.forEach(checkbox => {
+                                checkbox.checked = false;
+                            });
+                        }
+                    }
+                };
+                xhr.send();
+            })()
+        </script>
+    </body>
+</html>

@@ -330,7 +330,7 @@ header {
 .pr {
     position: relative;
 }
-/*This CSS code defines a series of classes for controlling page layout and style*/
+
 .pa {
     position: absolute;
 }
@@ -357,8 +357,7 @@ header {
     _zoom: 1;
     _float: left;
 }
-/*CSS code provides some layout related styles through defined classes, 
-which are used to handle element positioning, image style and link representation, and floating layout*/
+
 .col-right {
     float: right;
 }
@@ -378,4 +377,3 @@ which are used to handle element positioning, image style and link representatio
 .mt15 {
     margin-top: 15px;
 }
-/*Mainly used to set default styles for web page elements and define some special styles.*/
